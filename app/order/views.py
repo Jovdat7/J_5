@@ -20,6 +20,6 @@ def checkout(request):
 def wishlist(request):
     wishlist = WishList.objects.filter(user=request.user).first()
     context = {
-        'wish': wishlist
+        'wishlist': wishlist
     }
     return render(request, 'order/wishlist.html', context)
