@@ -31,7 +31,9 @@ class WishList(models.Model):
     )
     product = models.ManyToManyField(
         'product.Product',
-        related_name='wish_list'
+        related_name='wish_list',
+        null=True,
+        blank=True
     )
 
     class Meta:
